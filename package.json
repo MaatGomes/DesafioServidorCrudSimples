@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "module": "^1.2.5"
+  },
+  "name": "desafioservidorcrudsimples",
+  "description": "Um desafio da UC Sistemas Distribuídos e Mobile",
+  "version": "1.0.0",
+  "main": "crud.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaatGomes/DesafioServidorCrudSimples.git"
+  },
+  "author": "Mateus Gomes Veloso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaatGomes/DesafioServidorCrudSimples/issues"
+  },
+  "homepage": "https://github.com/MaatGomes/DesafioServidorCrudSimples#readme"
+}
