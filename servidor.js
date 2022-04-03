@@ -1,10 +1,14 @@
 var clientesNames = ["Mateus", "Laura", "Gustavo", "Rebeca", "Letícia"];
+var clientesEndereco = ["Rua Macedo lima, 23", "Rua Luxo, 900", "Avenida Latinha furada, 788", "Rua Corte Alameda, 402", "Rua Barbeiro Doce, 54"];
+var clientesEmails = ["mateus.gmail.com", "laura.gmail.com", "gustavo.gmail.com", "rebeca.gmail.com", "leticia.gmail.com"];
 var cliente = {};
 var clientesArray = [];
 
 for(let i = 0; i < clientesNames.length; i++){
     cliente.id = (i + 1);
     cliente.name = clientesNames[i];
+    cliente.endereco = clientesEndereco[i];
+    cliente.email = clientesEmails[i];
     clientesArray.push({...cliente});
 }
 
@@ -40,7 +44,9 @@ app.post('/cliente/cadastrarnovocliente', function(req, res){
 
     let newcliente = {
         id: newId, 
-        name: req.body.name
+        name: req.body.name,
+        endereco: req.body.endereco,
+        email: req.body.email
     };
 
     clientesArray.push(newcliente); 
@@ -59,7 +65,9 @@ app.put('/cliente/editarcliente/:id', function (req, res) {
     if (clienteEncontrado) {
         let clienteAtualizado = {
             id: clienteEncontrado.id,
-            title: req.body.name,
+            name: req.body.name,
+            endereco: req.body.endereco,
+            email: req.body.email
         }; 
 
         let index = clientesArray.indexOf(clienteEncontrado);
